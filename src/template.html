@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+</head>
+<body>
+    <div class="popup-task not-shown">Nah</div>
+    <div class="container">
+        <aside class="sidebar">
+            
+            <div class="default-sidebar">
+                <div class="sidebar-card-interr">
+                    <input type="text" placeholder="New Project..." id="input-project">
+                    <button class="button-of-interr" id="add-project">+</button>
+                    <span>Add Project</span>
+                </div>
+                <div class="sidebar-card-interr">
+                    <button id="add-task" class="button-of-interr">+</button>
+                    <span>Add Task</span>
+
+                </div>
+                <div class="sidebar-card" id="home-project"> All tasks</div>
+                <div class="sidebar-card" id="today-project"> Today</div>
+            </div>
+            <div class="added-sidebar"id="more-projects">qweqwe</div>
+
+        </aside>
+        <dialog id="task-dialog">
+            <button id="dialog-close">Close</button>
+            <h3 class="dialog-project"></h3>
+                <fieldset>
+                    <label for="task-input-dialog">Title Of Task:</label>
+                    <input type="text" id="task-input-dialog">
+    
+                </fieldset>
+                <fieldset>
+                    <label for="task-due-date">Title Of Task:</label>
+                    <input type="date" id="task-due-date">
+                                  
+                </fieldset>
+                <fieldset class="radio-fieldset">
+                    <div class="low-priority">
+                    <label for="low">Low</label>
+                    <input type="radio" name="priority" id="low" value="low" >
+                    </div>
+    
+                    <div class="medium-priority">
+                        <label for="medium">Medium</label>
+                        <input type="radio" name="priority" id="medium" value="medium">
+    
+                    </div>
+                    <div class="high-priority">
+                        
+                    <label for="high">High</label>
+                    <input type="radio" name="priority" id="high" value="high">
+                    </div>
+    
+                </fieldset>
+                <button id="task-dialog-button">Submit task</button>
+            
+
+        </dialog>
+        
+        <dialog id="project-dialog">
+            <input type="text">
+            <input type="text">
+
+        </dialog>
+        <main >
+            <div class="user-class">
+                <h1 class="user-class-h1"></h1>
+                <div class="class-buttons"></div>
+            </div>
+            <div id="content"></div>
+        </main>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,184 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 5px;
+}
+.container{
+    border-radius: 15px ;
+    height: 99vh;
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
+        background-color: rgba(206, 231, 231, 0.808);
+
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    grid-row: 1/4;
+    padding: 35px;
+    background-color: rgb(133, 231, 231);
+        border-radius: 15px ;
+
+}
+.sidebar-card-interr{
+ border: 1px solid;
+ text-transform:capitalize;
+ padding: 5px;
+ border-radius: 10px;
+}
+.sidebar-card{
+    padding: 5px;
+    border: 1px solid;
+ cursor: pointer;
+ text-transform:capitalize;
+}
+.sidebar-card:active{
+    background-color: white;
+}
+.account-detail{
+    display: flex;
+    justify-content: space-between;
+}
+#input-project{
+    padding: 5px;
+    font-size: 1rem;
+}
+.default-sidebar,
+.added-sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+main{
+    margin: 15px;
+
+}
+
+.task-card{
+    display: grid;
+    grid-template-columns:0.5fr 3fr 1fr 0.5fr 0.5fr;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid;
+    width:700px;
+    gap: 5px;
+    padding: 15px;
+}
+#content{
+    padding: 25px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 87vh;
+    border-radius: 15px;
+    overflow: auto;
+}
+.low-priority{
+    border-left: 8px solid green;
+}
+.medium-priority{
+        border-left: 8px solid yellow;
+
+}
+.high-priority{
+     border-left: 8px solid red;
+   
+}
+
+#task-dialog[open]{
+
+    width: 500px;
+    height: 500px;
+    position: fixed;
+    top: 20%;
+    left: 35%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+fieldset{
+     width: 300px;
+     font-size: 1.5rem;
+     padding: 25px;
+ }
+.radio-fieldset{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.radio-fieldset div{
+    height: 25px;
+    display: flex;
+}
+
+.not-shown{
+    display: none;
+}
+.popup-task{
+    background-color: white;
+    border: 1px solid;
+    border-radius: 15px;
+    text-align: center;
+    padding: 25px;
+    font-size: 1.5rem;
+    position: fixed;
+    width: 400px;
+    height: 100px;
+    bottom: 10%;
+    right: 10%;
+}
+.button-of-interr{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid;
+    cursor: pointer;
+}
+.user-class{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 10px;
+}
+.class-buttons{
+    display: flex;
+    gap: 25px;
+}
+.class-buttons button{
+    padding:5px;
+    font-size: 1rem;
+    border-radius:15px ;
+    border: .5px solid;
+    cursor: pointer;
+}
+@media (max-width:1096px) {
+    .task-card{
+        width: 400px;
+    }
+}
+@media (max-width:800px) {
+    container{
+        height: fit-content;
+    }
+    #content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .task-card{
+        font-size: smaller;
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        width: 150px;
+    }
+}
